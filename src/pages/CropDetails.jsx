@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getCropById } from "../utils/api";
+import { useAuth } from "../hooks/useAuth";
 import InterestForm from "../components/InterestForm";
+import ReceivedInterests from "../components/ReceivedInterests";
 
 const CropDetails = () => {
   const { id } = useParams();
+  const { user } = useAuth();
   const [crop, setCrop] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -282,6 +285,7 @@ const CropDetails = () => {
         </div>
 
         <InterestForm crop={crop} onInterestSent={fetchCrop} />
+        <ReceivedInterests crop={crop} onInterestUpdated={fetchCrop} />
       </div>
     </div>
   );
