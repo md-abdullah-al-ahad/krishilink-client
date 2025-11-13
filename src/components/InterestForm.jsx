@@ -187,11 +187,11 @@ const InterestForm = ({ crop, onInterestSent }) => {
               <div className="flex justify-between items-center text-lg">
                 <span className="font-semibold">Total Price:</span>
                 <span className="text-primary font-bold text-2xl">
-                  ₹{totalPrice.toLocaleString()}
+                  ৳{totalPrice.toLocaleString()}
                 </span>
               </div>
               <p className="text-sm text-base-content/60 mt-2">
-                {quantity} {crop.unit} × ₹{crop.pricePerUnit}/{crop.unit}
+                {quantity} {crop.unit} × ৳{crop.pricePerUnit}/{crop.unit}
               </p>
             </div>
 
@@ -239,7 +239,7 @@ const InterestForm = ({ crop, onInterestSent }) => {
                 Quantity: {formData.quantity} {crop.unit}
               </p>
               <p>
-                Total: ₹
+                Total: ৳
                 {(formData.quantity * crop.pricePerUnit).toLocaleString()}
               </p>
               {formData.message && (

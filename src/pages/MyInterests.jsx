@@ -10,6 +10,10 @@ const MyInterests = () => {
   const [loading, setLoading] = useState(true);
   const [sortBy, setSortBy] = useState("status");
 
+  useEffect(() => {
+    document.title = "My Interests - KrishiLink";
+  }, []);
+
   const fetchMyInterests = async () => {
     if (!user?.email) return;
 

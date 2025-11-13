@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useAuth } from "../hooks/useAuth";
 import { updateProfile } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
@@ -10,6 +10,10 @@ const Profile = () => {
   const [displayName, setDisplayName] = useState(user?.displayName || "");
   const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    document.title = "My Profile - KrishiLink";
+  }, []);
 
   const handleEditToggle = () => {
     if (isEditMode) {

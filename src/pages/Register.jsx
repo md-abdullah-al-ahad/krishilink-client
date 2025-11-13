@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -6,6 +7,9 @@ import { getAuthErrorMessage } from "../utils/validation";
 import { saveUserToDatabase } from "../utils/api";
 
 const Register = () => {
+  useEffect(() => {
+    document.title = "Register - KrishiLink";
+  }, []);
   const {
     register,
     handleSubmit,

@@ -134,7 +134,7 @@ const ReceivedInterests = ({ crop, onInterestUpdated }) => {
                         Total:
                       </span>
                       <span className="font-semibold ml-1 text-primary">
-                        ₹
+                        ৳
                         {(
                           interest.quantity * crop.pricePerUnit
                         ).toLocaleString()}

@@ -9,6 +9,7 @@ const AllCrops = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
+    document.title = "All Crops - KrishiLink";
     const fetchCrops = async () => {
       try {
         setLoading(true);
@@ -270,7 +271,7 @@ const AllCrops = () => {
                         />
                       </svg>
                       <span className="truncate">
-                        ₹{crop.pricePerUnit}/{crop.unit}
+                        ৳{crop.pricePerUnit}/{crop.unit}
                       </span>
                     </div>
 

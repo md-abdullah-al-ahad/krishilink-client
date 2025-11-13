@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
@@ -7,6 +8,10 @@ import toast from "react-hot-toast";
 const AddCrop = () => {
   const { user } = useAuth();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Add New Crop - KrishiLink";
+  }, []);
 
   const {
     register,
@@ -173,7 +178,7 @@ const AddCrop = () => {
                       </span>
                     </label>
                     <label className="input-group">
-                      <span className="bg-base-200">₹</span>
+                      <span className="bg-base-200">৳</span>
                       <input
                         type="number"
                         step="0.01"
@@ -289,7 +294,7 @@ const AddCrop = () => {
                 <div className="form-control">
                   <input
                     type="text"
-                    placeholder="e.g., Ludhiana, Punjab"
+                    placeholder="e.g., Rajshahi, Bangladesh"
                     className={`input input-bordered w-full focus:input-primary transition-all ${
                       errors.location ? "input-error" : ""
                     }`}

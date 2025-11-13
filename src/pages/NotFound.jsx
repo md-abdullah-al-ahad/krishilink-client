@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
+  useEffect(() => {
+    document.title = "404 - Page Not Found | KrishiLink";
+  }, []);
   return (
     <div className="min-h-screen flex items-center justify-center bg-linear-to-br from-green-50 via-emerald-50 to-lime-50 px-4 py-12">
       <div className="max-w-4xl w-full text-center">

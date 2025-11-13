@@ -4,7 +4,7 @@ const AgroNews = () => {
       id: 1,
       image:
         "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=800&q=80",
-      title: "Smart Farming Technologies Revolutionize Indian Agriculture",
+      title: "Smart Farming Technologies Revolutionize Bangladeshi Agriculture",
       excerpt:
         "Discover how AI and IoT are transforming traditional farming practices, helping farmers increase yields and reduce costs through precision agriculture.",
       date: "November 10, 2025",

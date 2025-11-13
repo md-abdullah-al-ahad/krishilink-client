@@ -30,6 +30,14 @@ const CropDetails = () => {
     fetchCrop();
   }, [id]);
 
+  useEffect(() => {
+    if (crop) {
+      document.title = `${crop.name} - KrishiLink`;
+    } else {
+      document.title = "Crop Details - KrishiLink";
+    }
+  }, [crop]);
+
   if (loading) {
     return (
       <div className="container mx-auto px-4 py-8">
@@ -159,7 +167,7 @@ const CropDetails = () => {
                   />
                 </svg>
                 <span>
-                  ₹{crop.pricePerUnit}/{crop.unit}
+                  ৳{crop.pricePerUnit}/{crop.unit}
                 </span>
               </div>
             </div>

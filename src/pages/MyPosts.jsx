@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { getMyCrops, updateCrop, deleteCrop } from "../utils/api";
+import toast from "react-hot-toast";
 
 const MyPosts = () => {
   const { user } = useAuth();
@@ -10,6 +11,10 @@ const MyPosts = () => {
   const [loading, setLoading] = useState(true);
   const [editingCrop, setEditingCrop] = useState(null);
   const [deletingCrop, setDeletingCrop] = useState(null);
+
+  useEffect(() => {
+    document.title = "My Posts - KrishiLink";
+  }, []);
 
   const {
     register,
@@ -269,7 +274,7 @@ const MyPosts = () => {
                             />
                           </svg>
                           <span className="truncate">
-                            ₹{crop.pricePerUnit}/{crop.unit}
+                            ৳{crop.pricePerUnit}/{crop.unit}
                           </span>
                         </div>
 

@@ -133,7 +133,7 @@ const LatestCrops = () => {
                         />
                       </svg>
                       <span>
-                        ₹{crop.pricePerUnit}/{crop.unit}
+                        ৳{crop.pricePerUnit}/{crop.unit}
                       </span>
                     </div>
 

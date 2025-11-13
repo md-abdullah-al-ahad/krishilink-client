@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import HowItWorks from "../components/home/HowItWorks";
@@ -6,6 +7,10 @@ import Testimonials from "../components/home/Testimonials";
 import AgroNews from "../components/home/AgroNews";
 
 const Home = () => {
+  useEffect(() => {
+    document.title = "KrishiLink - Agricultural Marketplace";
+  }, []);
+
   return (
     <div className="scroll-smooth">
       <Hero />
